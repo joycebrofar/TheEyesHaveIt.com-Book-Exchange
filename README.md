@@ -35,8 +35,8 @@ seller is servicing book purchases. Some sellers are very active and use TheEyes
 outlet for selling books. Thus, a service code is an important indicator of potential buyers.
 
 ### For this case, develop these diagrams:
-1. A fully developed description for two (2) use cases: Add seller and Record a book order
-2. A CRUD table showing use cases and corresponding domain class
+1. A fully developed description for two (2) use cases: Add seller and Record a book order.
+2. A CRUD table showing use cases and corresponding domain class.
 
 ## Reference:
 Satzinger, J., Jackson, and R., Burd, S. (2015). Systems Analysis and Design in a Changing World
