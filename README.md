@@ -1,43 +1,58 @@
-# Identifying User Stories and Use Cases (TheEyesHaveIt.com Book Exchange)
+# 1. Use Case Descriptions
+Use Case 1: Add Seller
+- Use Case Name: Add Seller
+- Actors: Seller, System
+- Preconditions:
+    - The seller must have a valid email address.
+    - The seller must be registered on TheEyesHaveIt.com.
+- Postconditions:
+    - The seller's information is stored in the system.
+    - The seller has an open account.
+- Main Flow:
+    - The seller accesses the registration form on TheEyesHaveIt.com.
+    - The seller enters their physical address, telephone number, and email address.
+    - The system validates the information.
+    - The system creates an account for the seller.
+    - The system sends a confirmation email to the seller.
 
-**TheEyesHaveIt.com** Book Exchange is a type of e-business exchange that does business entirely on the
-Internet. The company acts as a clearinghouse for buyers and sellers of used books.
-
-
-To offer books for sale, a person must register with TheEyesHaveIt.com. The person must provide a current
-physical address and telephone number as well as a current e-mail address. Next, the system then maintains
-an open account for this person. Access to the system as a seller is through a secure, authenticated portal.
-
-
-A seller can list books in the system through a special Internet form. The form asks for all the pertinent
-information about the book, its category, its general condition, and the asking price. A seller may list as many
-books as desired. The system maintains an index of all books in the system so buyers can use the search
-engine to search for books. The search engine allows searches by title, author, category, and keyword.
-People who want to buy books come to the site and search for the books they want. When they decide to
-buy, they must open an account with a credit card to pay for the books. The system maintains all this
-information on secure servers.
-
-
-When a purchase is made, TheEyesHaveIt.com sends an e-mail notice to the chosen book’s seller and
-payment information. It also marks the book as sold. The system maintains an open order until it receives
-notice that the book has been shipped. After the seller receives notice that a listed book has been sold, the
-seller must notify the buyer via e-mail within 48 hours that the purchase is noted. The shipment of the order
-must be made within 24 hours after the seller sends the notification e-mail. The seller sends a notification to
-the buyer and TheEiyesHaveIt.com when the shipment is made.
+**Alternate Flow:**
+- If the information is invalid, the system displays an error message and prompts the seller to correct the information.
 
 
-After receiving the notice shipment, TheEyesHaveIt.com maintains the order in shipped status. Every month,
-a check is mailed to each seller for the book orders that have remained in a shipped status for 30 days. The
-30-day waiting period exists to allow the buyer to notify TheEyeHaveIt.com I the shipment doesn’t arrive for
-some reason or if the book isn’t in the same condition as advertised.
-If they want, buyers can enter a service code for the seller. The service code is an indication of how well the
-seller is servicing book purchases. Some sellers are very active and use TheEyesHaveIt.com as a major
-outlet for selling books. Thus, a service code is an important indicator of potential buyers.
+Use Case 2: Record a Book Order
+- Use Case Name: Record a Book Order
+- Actors: Buyer, Seller, System
+- Preconditions:
+    - The buyer must have an account with a valid credit card.
+    - The seller must have listed books for sale.
+- Postconditions:
+    - The book order is recorded in the system.
+    - The seller is notified of the sale.
+- Main Flow:
+    - The buyer searches for a book using the search engine.
+    - The buyer selects a book and initiates the purchase.
+    - The system prompts the buyer to log in or create an account.
+    - The buyer enters payment information and confirms the order.
+    - The system records the order and sends an email notification to the seller.
+    - The system marks the book as sold.
 
-### For this case, develop these diagrams:
-1. A fully developed description for two (2) use cases: Add seller and Record a book order.
-2. A CRUD table showing use cases and corresponding domain class.
+**Alternate Flow:**
+- If the payment fails, the system displays an error message and prompts the buyer to re-enter payment information.
 
-## Reference:
-Satzinger, J., Jackson, and R., Burd, S. (2015). Systems Analysis and Design in a Changing World
-– Course Technology. USA. Cengage Learning.
+
+# The CRUD Table
+
+| Use Case            | Create | Read   | Update | Delete |
+|---------------------|--------|--------|--------|--------|
+| Add Seller          | ✔      |        |        |        |
+| Record a Book Order | ✔      | ✔      |        |        |
+| List Books          |        | ✔      |        |        |
+| Update Book Listing |        |        | ✔      |        |
+| Delete Book Listing |        |        |        | ✔      |
+| Notify Buyer        |        | ✔      |        |        |
+| Process Payment     |        |        |        | ✔      |
+
+
+## Summary
+- The use case descriptions outline the processes for adding a seller and recording a book order.
+- The CRUD table summarizes the operations associated with each use case, indicating which actions can be performed.
